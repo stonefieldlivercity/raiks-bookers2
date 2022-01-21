@@ -1,0 +1,22 @@
+<% render info %>
+<% render n %>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <tr></tr>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+    <tr>
+      <td><%= .name %></td>
+      <td><%= book.body %></td>
+      <td><%= link_to "Show", </td>
+    </tr>
+  </tbody>
+</table>
