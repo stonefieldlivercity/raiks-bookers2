@@ -1,26 +1,19 @@
-<div>
-  <h1>User info</h1>
-    <%= image_tag @user.get_profile_image("63x63") %>
-  
-  <table class = "table">
-    <tboddy>
-      <tr>
-        <th>name</th>
-        <th><%= user.name %></th>
-      </tr>
-      <tr>
-        <th>introduction</th>
-        <th><%= user.introduction %></th>
-      </tr>
-    </tbody>
-  </table>
-  
-  <div class = "row">
-    <%= link_to user_path(user.id), class: 'btn btn-outline-secondary btn-block fas fa-user-cog' %>
-  </div>
-  
-  <%= render 'books/new', book: @book %>
-</div>
-
-
-
+<h2>User info</h2>
+  <%= image_tag user.get_profile_image("100x100") %>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>name</th>
+          <th><%= user.name %></th>
+        </tr>
+        <tr>
+          <th>introduction</th>
+          <th><%= user.introduction %></th>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+        <%= link_to edit_user_path(user.id), class: "btn btn-outline-secondary btn-block" do %>
+        <i class="fas fa-user-cog"></i>
+        <% end %>
+    </div>

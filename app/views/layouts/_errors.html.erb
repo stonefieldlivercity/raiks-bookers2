@@ -1,0 +1,12 @@
+<div class = "error_explanation">
+  <% if object.errors.any? %>
+    <div id="error_explanation">
+      <p><%= object.errors.count %>errors prohibited this object from being saved:</p>
+      <ul>
+        <% object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
